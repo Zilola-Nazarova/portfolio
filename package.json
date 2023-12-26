@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "eslint": "npx eslint \"**/*.{js,jsx}"
+    "eslint": "npx eslint \"**/*.{js,jsx}\"",
+    "stylelint": "npx stylelint \"**/*.{css,scss}\""
   },
   "dependencies": {
     "react": "^18.2.0",
