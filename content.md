@@ -33,6 +33,7 @@ https://github.com/Zilola-Nazarova?tab=repositories
 https://www.linkedin.com/in/zilola-nazarova/
 https://twitter.com/NazarovaZi
 https://medium.com/@zilolanazarova
+https://wellfound.com/u/zilola-nazarova
 
 Get my Resume
 
