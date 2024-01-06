@@ -60,3 +60,9 @@ https://smart-pocket-app.onrender.com/
 
 - HTML
 - CSS
+
+// Front-End: JavaScript, React, Redux, jQuery, HTML5, CSS3
+// Back-End: Ruby, Rails, PostgreSQL
+// Tools & Methods: Git, GitHub, Heroku, Netlify, Mobile/Responsive Development, RSpec, TDD, Chrome Dev Tools
+// Professional: Remote Pair-Programming, Teamwork, Mentoring.
+// Graphical Tools:  Adobe Photoshop, Adobe Illustrator, CorelDraw, Figma
