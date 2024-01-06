@@ -1,16 +1,11 @@
 // import { Outlet } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
-import Projects from './Projects';
-import Hero from './Hero';
+import Left from './Left';
+import Right from './Right';
 
 const Portfolio = () => (
   <>
-    <Header />
-    <p>PORTFOLIO</p>
-    <Projects />
-    <Hero />
-    <Footer />
+    <Left />
+    <Right />
   </>
 );
 
