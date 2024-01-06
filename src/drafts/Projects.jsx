@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import {useRef} from 'react';
 import styles from '../styles/Projects.module.css'
 

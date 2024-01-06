@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
