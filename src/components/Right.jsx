@@ -31,12 +31,11 @@ const Right = () => {
   return (
     <div className={styles.right}>
       <header>
-        <img className={styles.avatar} src={peach} alt="avatar"/>
+        <img className={styles.avatar} src={peach} alt="avatar" />
         <ul>
           {links.map((elem, i) => (
-            <li>
+            <li key={uuidv4()}>
               <TabButton
-                key={uuidv4()}
                 isActive={tab === elem}
                 onClick={() => handleClick(i)}
               >

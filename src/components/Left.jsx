@@ -25,18 +25,23 @@ const Left = () => {
     });
   };
 
+  const bullets = [];
+  for (let i = 0; i < 4; i += 1) {
+    bullets.push(
+      <Bullet
+        key={uuidv4()}
+        isActive={tab === `pr_${i}`}
+        onClick={() => handleClick(i)}
+      >
+        <TbPointFilled className={styles.bullet} size="30px" />
+      </Bullet>,
+    );
+  }
+
   return (
     <div className={styles.left}>
       <nav>
-        {projectDetails.map((project, index) => (
-          <Bullet
-            key={uuidv4()}
-            isActive={tab === `pr_${index}`}
-            onClick={() => handleClick(index)}
-          >
-            <TbPointFilled className={styles.bullet} size="30px" />
-          </Bullet>
-        ))}
+        {bullets}
       </nav>
       <section ref={container} className="container">
         {projectDetails.map((project, i) => (
