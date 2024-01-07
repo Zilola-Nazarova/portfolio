@@ -8,8 +8,7 @@ import { TbPointFilled } from 'react-icons/tb';
 import Bullet from './Bullet';
 import projectDetails from '../assets/projects';
 import Project from './Project';
-
-import styles from '../styles/Projects.module.css';
+import styles from '../styles/Left.module.css';
 
 const Left = () => {
   // const pr_1 = useRef(null);
@@ -27,7 +26,7 @@ const Left = () => {
   };
 
   return (
-    <div className="left">
+    <div className={styles.left}>
       <nav>
         {projectDetails.map((project, index) => (
           <Bullet
@@ -35,13 +34,14 @@ const Left = () => {
             isActive={tab === `pr_${index}`}
             onClick={() => handleClick(index)}
           >
-            <TbPointFilled className="bullet" size="30px" />
+            <TbPointFilled className={styles.bullet} size="30px" />
           </Bullet>
         ))}
       </nav>
-      <section ref={container} className={styles.projects}>
+      <section ref={container} className="container">
         {projectDetails.map((project, i) => (
           <article
+            className={styles.project}
             ref={elementsRef.current[i]}
             key={uuidv4()}
           >

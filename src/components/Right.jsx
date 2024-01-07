@@ -4,6 +4,8 @@ import TabButton from './TabButton';
 import HomeTab from './HomeTab';
 import AboutTab from './AboutTab';
 import Contact from './Contact';
+import styles from '../styles/Right.module.css';
+import peach from '../assets/peach.png';
 
 const Right = () => {
   const [tab, setTab] = useState('home');
@@ -12,7 +14,6 @@ const Right = () => {
   const linksRef = useRef(links.map(() => createRef()));
 
   const handleClick = (index) => {
-    console.log('click');
     const ref = linksRef.current[index];
     container.current.scrollTo({
       top: ref.current.offsetTop,
@@ -28,22 +29,27 @@ const Right = () => {
   ];
 
   return (
-    <div className="right">
+    <div className={styles.right}>
       <header>
-        {links.map((elem, i) => (
-          <TabButton
-            key={uuidv4()}
-            isActive={tab === elem}
-            onClick={() => handleClick(i)}
-          >
-            {elem}
-          </TabButton>
-        ))}
+        <img className={styles.avatar} src={peach} alt="avatar"/>
+        <ul>
+          {links.map((elem, i) => (
+            <li>
+              <TabButton
+                key={uuidv4()}
+                isActive={tab === elem}
+                onClick={() => handleClick(i)}
+              >
+                {elem}
+              </TabButton>
+            </li>
+          ))}
+        </ul>
       </header>
       <div className="container" ref={container}>
         {sections.map((elem, i) => (
           <section
-            className={links[i]}
+            className={styles[links[i]]}
             key={uuidv4()}
             ref={linksRef.current[i]}
           >
@@ -56,4 +62,3 @@ const Right = () => {
 };
 
 export default Right;
-// export { linksRef };

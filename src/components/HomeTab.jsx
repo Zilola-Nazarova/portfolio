@@ -11,17 +11,15 @@ import {
 import { SiWellfound } from 'react-icons/si';
 
 import styles from '../styles/HomeTab.module.css';
-import peach from '../assets/peach.png';
 
 const HomeTab = ({ sayHi }) => (
   <>
-    <img src={peach} alt="avatar" height="50px" width="50px" />
-    <h1>
+    <h1 className={styles.title}>
       FULL-STACK DEVELOPER. ARCHITECT.
       <br />
       FREE-TIME MOUNTAINEER, PIANIST, ARTIST
     </h1>
-    <p>
+    <p className={styles.hero}>
       Full-stack web developer with a background in architecture and a love for UX/UI.
       Embrace and excel in the realm of mathematics and arts.
       Experienced in pair programming and remote work, quick to adapt.
@@ -37,7 +35,7 @@ const HomeTab = ({ sayHi }) => (
     </ul>
     <button
       type="button"
-      className={styles.say_hi}
+      className={`${styles.say_hi} btn`}
       onClick={() => { sayHi(); }}
     >
       Say Hi
