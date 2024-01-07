@@ -1,10 +1,11 @@
-import styles from '../styles/Contact.module.css'
+import styles from '../styles/Contact.module.css';
 
 const Contact = () => (
   <>
     <h2>Get started</h2>
     <p className="dark-blue poppins">
-      I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
+      I&apos;m always interested in hearing about new projects,
+      so if you&apos;d like to chat please get in touch.
     </p>
     <form
       id="send-message"
@@ -16,44 +17,43 @@ const Contact = () => (
         htmlFor="user-name"
       >
         Your name
+        <input
+          type="text"
+          id="user-name"
+          name="user_name"
+          placeholder="Enter your name"
+          maxLength="30"
+          required
+        />
       </label>
-      <input
-        type="text"
-        id="user-name"
-        name="user_name"
-        placeholder="Enter your name"
-        maxLength="30"
-        required>
-      </input>
-      <small className="poppins"></small>
+      <small className="poppins" />
       <label
         className="poppins"
         htmlFor="user-email"
       >
         Your email
+        <input
+          type="email"
+          id="user-email"
+          name="user_email"
+          placeholder="Enter your email."
+          required
+        />
       </label>
-      <input
-        type="email"
-        id="user-email"
-        name="user_email"
-        placeholder="Enter your email."
-        required>
-      </input>
-      <small className="poppins"></small>
+      <small className="poppins" />
       <label
         className="poppins"
-        htmlFor="user-message"
+        htmlFor="message"
       >
         Your message
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Enter your message here..."
+          maxLength="500"
+          required
+        />
       </label>
-      <textarea
-        id="user-message"
-        name="user_message"
-        placeholder="Enter your message here..."
-        maxLength="500"
-        required
-      >
-      </textarea>
       <button
         className="poppins white"
         type="submit"
