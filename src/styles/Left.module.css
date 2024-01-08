@@ -53,3 +53,19 @@
     color: #ffffff;
   }
 }
+
+.project:nth-child(4n + 1) {
+  background-color: #7d4abe;
+}
+
+.project:nth-child(4n + 2) {
+  background-color: #54adb3;
+}
+
+.project:nth-child(4n + 3) {
+  background-color: #d074c9
+}
+
+.project:nth-child(4n + 0) {
+  background-color: #73b84b;
+}
