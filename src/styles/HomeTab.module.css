@@ -1,0 +1,55 @@
+.title,
+.subtitle {
+  color: rgb(37, 37, 37);
+  font-family: 'Abril Fatface', serif;
+}
+
+.title {
+  font-size: max(2rem, 2vw);
+  font-weight: 700;
+}
+
+.subtitle {
+  color: rgb(94, 94, 94);
+  font-size: max(1.2rem, 1vw);
+  font-weight: 400;
+}
+
+.say_hi {
+  margin-top: min(1.2rem, 10%);
+}
+
+.hero,
+.social {
+  margin-top: min(4rem, 15%);
+}
+
+.hero {
+  color: rgb(26, 26, 26);
+  font-size: max(1rem, 1vw);
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.social {
+  display: flex;
+  gap: 1.5vw;
+  color: white;
+  min-height: 2.3rem;
+  height: 2.2vw;
+}
+
+.social li {
+  height: 100%;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+.social svg {
+  height: 100%;
+  width: auto;
+}
+
+.say_hi {
+  font-weight: 400;
+}
