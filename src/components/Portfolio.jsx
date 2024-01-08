@@ -9,7 +9,7 @@ const Portfolio = () => {
   return (
     <>
       <Left colorTheme={(i) => setColor(i)} />
-      <Right />
+      <Right color={color} />
     </>
   );
 };

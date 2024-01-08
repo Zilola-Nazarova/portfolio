@@ -7,7 +7,7 @@ import Contact from './Contact';
 import styles from '../styles/Right.module.css';
 import peach from '../assets/peach.png';
 
-const Right = () => {
+const Right = ({ color }) => {
   const [tab, setTab] = useState('home');
   const container = useRef(null);
   const links = ['home', 'about', 'contact'];
@@ -41,7 +41,7 @@ const Right = () => {
   };
 
   return (
-    <div className={styles.right}>
+    <div className={`${styles.right} theme_${color}`}>
       <header>
         <img className={styles.avatar} src={peach} alt="avatar" />
         <ul>
