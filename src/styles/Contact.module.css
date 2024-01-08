@@ -1,0 +1,64 @@
+.title {
+  color: rgb(37, 37, 37);
+  font-family: 'Abril Fatface', serif;
+  font-size: max(2rem, 2vw);
+  /* margin-bottom: 1rem; */
+}
+
+.text {
+  /* text-transform: uppercase; */
+  color: rgb(94, 94, 94);
+  /* font-size: max(1.2rem, 1vw); */
+  font-weight: 500;
+  font-size: max(1rem, 0.8vw);
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2rem;
+}
+
+.form {
+  /* margin-top: 1rem; */
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #7d7c84;
+}
+
+input,
+textarea {
+  margin-top: 0.1rem;
+  display: block;
+  width: 100%;
+  border: 1px solid #dfdfe0;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: rgb(37, 37, 37);
+  font-weight: 400;
+  padding: 0.5rem 0.5rem;
+}
+
+textarea {
+  height: 7rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #7d7c84;
+  font-size: 0.9rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: #7a7a7a 1px solid;
+}
+
+.submit {
+  margin-top: 2.5rem;
+}

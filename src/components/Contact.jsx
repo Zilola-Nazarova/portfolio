@@ -1,19 +1,20 @@
-// import styles from '../styles/Contact.module.css';
+import styles from '../styles/Contact.module.css';
 
 const Contact = () => (
   <>
-    <h2>Get started</h2>
-    <p className="dark-blue poppins">
+    <h2 className={styles.title}>GET STARTED</h2>
+    <p className={styles.text}>
       I&apos;m always interested in hearing about new projects,
       so if you&apos;d like to chat please get in touch.
     </p>
     <form
+      className={styles.form}
       id="send-message"
       action="https://formspree.io/f/xpzegyyg"
       method="POST"
     >
       <label
-        className="poppins"
+        className={styles.label}
         htmlFor="user-name"
       >
         Your name
@@ -26,9 +27,9 @@ const Contact = () => (
           required
         />
       </label>
-      <small className="poppins" />
+      <small className={styles.error} />
       <label
-        className="poppins"
+        className={styles.label}
         htmlFor="user-email"
       >
         Your email
@@ -36,13 +37,13 @@ const Contact = () => (
           type="email"
           id="user-email"
           name="user_email"
-          placeholder="Enter your email."
+          placeholder="Enter your email"
           required
         />
       </label>
-      <small className="poppins" />
+      <small className={styles.error} />
       <label
-        className="poppins"
+        className={styles.label}
         htmlFor="message"
       >
         Your message
@@ -55,10 +56,10 @@ const Contact = () => (
         />
       </label>
       <button
-        className="poppins white"
+        className={`${styles.submit} btn`}
         type="submit"
       >
-        Start collaboration
+        SEND
       </button>
     </form>
   </>
