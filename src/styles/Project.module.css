@@ -1,0 +1,57 @@
+.title {
+  text-transform: uppercase;
+}
+
+.description {
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.mockup {
+  height: 40%;
+  width: 100%;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 15px 15px 25px 5px rgba(0, 0, 0, 0.171);
+}
+
+.link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+.link a {
+  text-decoration: none;
+  height: 3rem;
+  width: 10rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: 0.1rem;
+  padding: 1rem 1rem;
+  border: 1px solid white;
+  border-radius: max(1.5rem, 2.5vw);
+  color: white;
+  text-align: center;
+}
+
+.tech {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+.tech li {
+  width: auto;
+  border: 1px solid white;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
