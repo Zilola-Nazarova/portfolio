@@ -1,5 +1,4 @@
 import React from 'react';
-// import Popup from 'reactjs-popup';
 import PropTypes from 'prop-types';
 import {
   FaGithub,

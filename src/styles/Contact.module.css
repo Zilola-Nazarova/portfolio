@@ -2,13 +2,10 @@
   color: rgb(37, 37, 37);
   font-family: 'Abril Fatface', serif;
   font-size: max(2rem, 2vw);
-  /* margin-bottom: 1rem; */
 }
 
 .text {
-  /* text-transform: uppercase; */
   color: rgb(94, 94, 94);
-  /* font-size: max(1.2rem, 1vw); */
   font-weight: 500;
   font-size: max(1rem, 0.8vw);
   font-family: 'Montserrat', sans-serif;

@@ -1,4 +1,3 @@
-// import { Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import Left from './Left';
 import Right from './Right';

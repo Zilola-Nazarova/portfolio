@@ -11,7 +11,7 @@
   color: white;
   height: 100vh;
   padding: 3rem 8vw;
-  padding-right: calc(8vw + 3rem); 
+  padding-right: calc(8vw + 3rem);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -48,9 +48,10 @@
 
 .left button.active {
   background: radial-gradient(circle at center, #ffffffd7, #ffffff9f 20%, transparent 70%);
-  color: #ffffff;
+  color: #fff;
+
   .bullet {
-    color: #ffffff;
+    color: #fff;
   }
 }
 
@@ -63,7 +64,7 @@
 }
 
 .project:nth-child(4n + 3) {
-  background-color: #d074c9
+  background-color: #d074c9;
 }
 
 .project:nth-child(4n + 0) {

@@ -1,11 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
-// import { objectOf } from 'prop-types';
 
 import styles from '../styles/Project.module.css';
 
 const Project = ({ project, id }) => {
-  const mock_id = `mock_${id + 1}`;
+  const mockId = `mock_${id + 1}`;
   const liveDemo = project.live_demo;
   const image = project.featured_image;
   const {
@@ -17,8 +16,8 @@ const Project = ({ project, id }) => {
 
   return (
     <>
-      <div className={`${styles[mock_id]} ${styles.mockup}`}>
-        Mockup
+      <div className={`${styles[mockId]} ${styles.mockup}`}>
+        <img src={image} alt="Project preview" />
       </div>
       <h2 className={styles.title}>{name}</h2>
       <p className={styles.description}>{description}</p>
@@ -36,6 +35,7 @@ const Project = ({ project, id }) => {
 };
 
 Project.propTypes = {
+  id: PropTypes.number.isRequired,
   project: PropTypes.objectOf({
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,

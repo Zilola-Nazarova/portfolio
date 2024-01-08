@@ -3,7 +3,6 @@
   flex: 2;
   height: 100vh;
   position: relative;
-  /* overflow-y: scroll; */
   display: flex;
   flex-direction: column;
 }
@@ -25,7 +24,6 @@ header {
   width: 3.8rem;
   border-radius: 50%;
   position: relative;
-
 }
 
 .avatar img {
@@ -39,7 +37,7 @@ header ul {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  gap: 8%; 
+  gap: 8%;
 }
 
 header button {

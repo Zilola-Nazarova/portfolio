@@ -15,10 +15,6 @@
   font-weight: 400;
 }
 
-.say_hi {
-  margin-top: min(1.2rem, 10%);
-}
-
 .hero,
 .social {
   margin-top: min(4rem, 15%);
@@ -51,5 +47,6 @@
 }
 
 .say_hi {
+  margin-top: min(1.2rem, 10%);
   font-weight: 400;
 }
