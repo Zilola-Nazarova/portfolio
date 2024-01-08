@@ -28,6 +28,19 @@ const Right = () => {
     <Contact key={uuidv4()} />,
   ];
 
+  const handleScroll = () => {
+    const scrollY = container.current.scrollTop;
+    links.forEach((link, i) => {
+      const { offsetHeight, offsetTop } = linksRef.current[i].current;
+      if (
+        scrollY > offsetTop - (offsetHeight / 2)
+        && scrollY <= offsetTop + offsetHeight
+      ) {
+        setTab(link);
+      }
+    });
+  };
+
   return (
     <div className={styles.right}>
       <header>
@@ -45,7 +58,11 @@ const Right = () => {
           ))}
         </ul>
       </header>
-      <div className="container" ref={container}>
+      <div
+        className="container"
+        ref={container}
+        onScroll={() => handleScroll()}
+      >
         {sections.map((elem, i) => (
           <section
             className={styles[links[i]]}

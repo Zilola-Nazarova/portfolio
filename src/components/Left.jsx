@@ -38,12 +38,29 @@ const Left = () => {
     );
   }
 
+  const handleScroll = () => {
+    const scrollY = container.current.scrollTop;
+    bullets.forEach((bullet, i) => {
+      const { offsetHeight, offsetTop } = elementsRef.current[i].current;
+      if (
+        scrollY > offsetTop - (offsetHeight / 2)
+        && scrollY <= offsetTop + offsetHeight
+      ) {
+        setTab(`pr_${i}`);
+      }
+    });
+  };
+
   return (
     <div className={styles.left}>
       <nav>
         {bullets}
       </nav>
-      <section ref={container} className="container">
+      <section
+        ref={container}
+        className="container"
+        onScroll={() => handleScroll()}
+      >
         {projectDetails.map((project, i) => (
           <article
             className={styles.project}
