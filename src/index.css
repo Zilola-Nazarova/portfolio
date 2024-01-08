@@ -30,3 +30,22 @@ button {
 .container::-webkit-scrollbar {
   display: none;
 }
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  width: 40%;
+  height: 3vw;
+  min-height: 3rem;
+  min-width: 10rem;
+  text-transform: uppercase;
+  font-size: max(1rem, 1vw);
+  line-height: max(1rem, 1vw);
+  letter-spacing: 0.1rem;
+  padding: 1rem;
+  border-radius: max(1.5rem, 2.5vw);
+  color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+  filter: contrast(135%);
+}
