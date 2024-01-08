@@ -7,7 +7,7 @@ import { TbPointFilled } from 'react-icons/tb';
 // import { NavLink, useNavigate } from 'react-router-dom';
 import Bullet from './Bullet';
 import projectDetails from '../assets/projects';
-import Project from './Project';
+import Project from './Project.jsx';
 import styles from '../styles/Left.module.css';
 
 const Left = () => {
