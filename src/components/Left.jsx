@@ -64,7 +64,7 @@ const Left = () => {
             ref={elementsRef.current[i]}
             key={uuidv4()}
           >
-            <Project project={project} />
+            <Project project={project} id={i} />
           </article>
         ))}
       </section>

@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 
 import styles from '../styles/Project.module.css';
 
-const Project = ({ project }) => {
+const Project = ({ project, id }) => {
+  const mock_id = `mock_${id + 1}`;
   const liveDemo = project.live_demo;
   const image = project.featured_image;
   const {
@@ -16,7 +17,7 @@ const Project = ({ project }) => {
 
   return (
     <>
-      <div className={styles.mockup}>
+      <div className={`${styles[mock_id]} ${styles.mockup}`}>
         Mockup
       </div>
       <h2 className={styles.title}>{name}</h2>
