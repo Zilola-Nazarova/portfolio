@@ -31,9 +31,7 @@ const Left = () => {
         key={uuidv4()}
         isActive={tab === `pr_${i}`}
         onClick={() => handleClick(i)}
-      >
-        <TbPointFilled className={styles.bullet} size="30px" />
-      </Bullet>,
+      />,
     );
   }
 
