@@ -10,7 +10,7 @@ import projectDetails from '../assets/projects';
 import Project from './Project';
 import styles from '../styles/Left.module.css';
 
-const Left = () => {
+const Left = ({ colorTheme }) => {
   // const pr_1 = useRef(null);
   const [tab, setTab] = useState('pr_0');
   const container = useRef(null);
@@ -44,6 +44,7 @@ const Left = () => {
         && scrollY <= offsetTop + offsetHeight
       ) {
         setTab(`pr_${i}`);
+        colorTheme(i);
       }
     });
   };
