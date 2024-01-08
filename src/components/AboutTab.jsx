@@ -15,27 +15,36 @@ const AboutTab = () => {
     <>
       <div className={styles.stack}>
         <h1 className={styles.title}>STACK</h1>
-        <ul className={styles.topic}>
-          Languages
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Ruby</li>
-          <li>JavaScript (ES5/ES6)</li>
-        </ul>
-        <ul className={styles.topic}>
-          Frameworks
-          <li>React.js</li>
-          <li>Ruby on rails</li>
-          <li>RSpec</li>
-          <li>Capibara</li>
-        </ul>
-        <ul className={styles.topic}>
-          Skills
-          <li>Database Management</li>
-          <li>CLI</li>
-          <li>API Design</li>
-          <li>Version Control</li>
-        </ul>
+        <div className={styles.topic}>
+          <h2>Languages</h2>
+          <hr />
+          <ul className={`${styles.table}`}>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Ruby</li>
+            <li>JavaScript (ES5/ES6)</li>
+          </ul>
+        </div>
+        <div className={styles.topic}>
+          <h2>Frameworks</h2>
+          <hr />
+          <ul className={`${styles.table}`}>
+            <li>React.js</li>
+            <li>Ruby on rails</li>
+            <li>RSpec</li>
+            <li>Capibara</li>
+          </ul>
+        </div>
+        <div className={styles.topic}>
+          <h2>Skills</h2>
+          <hr />
+          <ul className={`${styles.table}`}>
+            <li>Database Management</li>
+            <li>CLI</li>
+            <li>API Design</li>
+            <li>Version Control</li>
+          </ul>
+        </div>
       </div>
       <button
         type="button"
