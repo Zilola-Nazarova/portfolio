@@ -19,7 +19,6 @@ const Right = () => {
       top: ref.current.offsetTop,
       behavior: 'smooth',
     });
-    setTab(links[index]);
   };
 
   const sections = [

@@ -18,7 +18,6 @@ const Left = () => {
 
   const handleClick = (index) => {
     const ref = elementsRef.current[index];
-    setTab(`pr_${index}`);
     container.current.scrollTo({
       top: ref.current.offsetTop,
       behavior: 'smooth',
