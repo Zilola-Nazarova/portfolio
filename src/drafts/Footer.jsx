@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const Footer = () => (
   <>
     <p>FOOTER</p>
