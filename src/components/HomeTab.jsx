@@ -15,10 +15,13 @@ import styles from '../styles/HomeTab.module.css';
 const HomeTab = ({ sayHi }) => (
   <>
     <h1 className={styles.title}>
-      FULL-STACK DEVELOPER. ARCHITECT.
+      FULL-STACK
       <br />
-      FREE-TIME MOUNTAINEER, PIANIST, ARTIST
+      SOFTWARE DEVELOPER. ARCHITECT.
     </h1>
+    <h2 className={styles.subtitle}>
+      FREE-TIME MOUNTAINEER, PIANIST, ARTIST
+    </h2>
     <p className={styles.hero}>
       Full-stack web developer with a background in architecture and a love for UX/UI.
       Embrace and excel in the realm of mathematics and arts.
