@@ -49,3 +49,94 @@ button {
 .btn:hover {
   filter: contrast(135%);
 }
+
+.theme_0  {
+  .bg {
+    background-color: #7d4abe;
+  }
+
+  .social li,
+  .table {
+    background-color: #7c4abe13;
+    svg,
+    li::before {
+    color: #7d4abe;
+    }
+  }
+  .social li:hover {
+    background-color: #7c4abe3a;
+  }
+
+  hr {
+    border: 1px solid #7d4abe;
+  }
+}
+
+.theme_1 {
+  .bg {
+    background-color: #54adb3;
+  }
+
+  .social li,
+  .table {
+    background-color: #54adb327;
+    svg,
+    li::before {
+      color: #54adb3;
+    }
+  }
+
+  .social li:hover {
+    background-color: #54adb34f;
+  }
+
+  hr {
+    border: 1px solid #54adb3;
+  }
+}
+
+.theme_2 {
+  .bg {
+    background-color: #d074c9;
+  }
+
+  .social li,
+  .table {
+    background-color: #d074c927;
+    svg,
+    li::before {
+      color: #d074c9;
+    }
+  }
+
+  .social li:hover {
+    background-color: #d074c94f;
+  }
+
+  hr {
+    border: 1px solid #d074c9;
+  }
+}
+
+.theme_3 {
+  .bg {
+    background-color: #73b84b;
+  }
+
+  .social li,
+  .table {
+    background-color: #73b84b27;
+    svg,
+    li::before {
+      color: #73b84b;
+    }
+  }
+
+  .social li:hover {
+    background-color: #73b84b4f;
+  }
+
+  hr {
+    border: 1px solid #73b84b;
+  }
+}

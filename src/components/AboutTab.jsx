@@ -48,7 +48,7 @@ const AboutTab = () => {
       </div>
       <button
         type="button"
-        className={`${styles.download} btn`}
+        className={`${styles.download} btn bg`}
         onClick={download}
       >
         Get my CV

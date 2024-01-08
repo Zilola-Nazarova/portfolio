@@ -56,7 +56,7 @@ const Contact = () => (
         />
       </label>
       <button
-        className={`${styles.submit} btn`}
+        className={`${styles.submit} btn bg`}
         type="submit"
       >
         SEND

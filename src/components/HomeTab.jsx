@@ -28,7 +28,7 @@ const HomeTab = ({ sayHi }) => (
       Experienced in pair programming and remote work, quick to adapt.
       Fast learner and multitasker.
     </p>
-    <ul className={styles.social}>
+    <ul className={`${styles.social} social`}>
       <li><a href="https://github.com/Zilola-Nazarova" aria-label="My GitHub"><FaGithub /></a></li>
       <li><a href="https://www.linkedin.com/in/zilola-nazarova/" aria-label="My LinkedIn"><FaLinkedin /></a></li>
       <li><a href="https://twitter.com/NazarovaZi" aria-label="My Twitter"><FaTwitter /></a></li>
@@ -38,7 +38,7 @@ const HomeTab = ({ sayHi }) => (
     </ul>
     <button
       type="button"
-      className={`${styles.say_hi} btn`}
+      className={`${styles.say_hi} btn bg`}
       onClick={() => { sayHi(); }}
     >
       Say Hi
