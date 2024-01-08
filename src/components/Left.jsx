@@ -1,17 +1,13 @@
-// import Scrollchor from 'react-scrollchor';
-// import Projects from './Projects';
-import { v4 as uuidv4 } from 'uuid';
-// import React from 'react';
 import { useRef, useState, createRef } from 'react';
-import { TbPointFilled } from 'react-icons/tb';
-// import { NavLink, useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types';
+
 import Bullet from './Bullet';
-import projectDetails from '../assets/projects';
 import Project from './Project';
+import projectDetails from '../assets/projects';
 import styles from '../styles/Left.module.css';
 
 const Left = ({ colorTheme }) => {
-  // const pr_1 = useRef(null);
   const [tab, setTab] = useState('pr_0');
   const container = useRef(null);
   const elementsRef = useRef(projectDetails.map(() => createRef()));
@@ -71,6 +67,10 @@ const Left = ({ colorTheme }) => {
       </section>
     </div>
   );
+};
+
+Left.propTypes = {
+  colorTheme: PropTypes.func.isRequired,
 };
 
 export default Left;

@@ -1,5 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useRef, useState, createRef } from 'react';
+import PropTypes from 'prop-types';
+
 import TabButton from './TabButton';
 import HomeTab from './HomeTab';
 import AboutTab from './AboutTab';
@@ -74,6 +76,10 @@ const Right = ({ color }) => {
       </div>
     </div>
   );
+};
+
+Right.propTypes = {
+  color: PropTypes.number.isRequired,
 };
 
 export default Right;
