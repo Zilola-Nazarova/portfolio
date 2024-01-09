@@ -50,93 +50,98 @@ button {
   filter: contrast(135%);
 }
 
-.theme_0  {
-  .bg {
-    background-color: #7d4abe;
-  }
-
-  .social li,
-  .table {
-    background-color: #7c4abe13;
-    svg,
-    li::before {
-    color: #7d4abe;
-    }
-  }
-  .social li:hover {
-    background-color: #7c4abe3a;
-  }
-
+.theme_0 {
   hr {
     border: 1px solid #7d4abe;
+  }
+
+  .bg {
+    background-color: #7d4abe;
   }
 }
 
 .theme_1 {
-  .bg {
-    background-color: #54adb3;
-  }
-
-  .social li,
-  .table {
-    background-color: #54adb327;
-    svg,
-    li::before {
-      color: #54adb3;
-    }
-  }
-
-  .social li:hover {
-    background-color: #54adb34f;
-  }
-
   hr {
     border: 1px solid #54adb3;
+  }
+
+  .bg {
+    background-color: #54adb3;
   }
 }
 
 .theme_2 {
-  .bg {
-    background-color: #d074c9;
-  }
-
-  .social li,
-  .table {
-    background-color: #d074c927;
-    svg,
-    li::before {
-      color: #d074c9;
-    }
-  }
-
-  .social li:hover {
-    background-color: #d074c94f;
-  }
-
   hr {
     border: 1px solid #d074c9;
+  }
+
+  .bg {
+    background-color: #d074c9;
   }
 }
 
 .theme_3 {
-  .bg {
-    background-color: #73b84b;
-  }
-
-  .social li,
-  .table {
-    background-color: #73b84b27;
-    svg,
-    li::before {
-      color: #73b84b;
-    }
-  }
-
-  .social li:hover {
-    background-color: #73b84b4f;
-  }
-
   hr {
     border: 1px solid #73b84b;
   }
+
+  .bg {
+    background-color: #73b84b;
+  }
+}
+
+.theme_0 .social {
+  li {
+    background-color: #7c4abe22;
+  }
+
+  svg {
+    color: #7d4abe;
+  }
+}
+
+.theme_1 .social {
+  li {
+    background-color: #54adb327;
+  }
+
+  svg {
+    color: #54adb3;
+  }
+}
+
+.theme_2 .social {
+  li {
+    background-color: #d074c927;
+  }
+
+  svg {
+    color: #d074c9;
+  }
+}
+
+.theme_3 .social {
+  li {
+    background-color: #73b84b27;
+  }
+
+  svg {
+    color: #73b84b;
+  }
+}
+
+.theme_0 .social li:hover {
+  background-color: #7c4abe3a;
+}
+
+.theme_1 .social li:hover {
+  background-color: #54adb34f;
+}
+
+.theme_2 .social li:hover {
+  background-color: #d074c94f;
+}
+
+.theme_3 .social li:hover {
+  background-color: #73b84b4f;
 }
