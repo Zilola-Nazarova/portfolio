@@ -1,18 +1,20 @@
 import PropTypes from 'prop-types';
+import { TbPointFilled } from 'react-icons/tb';
+
 import styles from '../styles/Left.module.css';
 
-const Bullet = ({ children, isActive, onClick }) => (
+const Bullet = ({ isActive, onClick }) => (
   <button
+    aria-label="Navigate to another project"
     type="button"
     onClick={() => onClick()}
     className={isActive ? styles.active : ''}
   >
-    {children}
+    <TbPointFilled className={styles.bullet} size="30px" />
   </button>
 );
 
 Bullet.propTypes = {
-  children: PropTypes.string.isRequired,
   isActive: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
 };
