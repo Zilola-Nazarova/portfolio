@@ -45,7 +45,9 @@ const Right = ({ color }) => {
   return (
     <div className={`${styles.right} theme_${color}`}>
       <header>
-        <img className={styles.avatar} src={peach} alt="avatar" />
+        <div className={`${styles.avatar} bg`}>
+          <img src={peach} alt="avatar" />
+        </div>
         <ul>
           {links.map((elem, i) => (
             <li key={uuidv4()}>
