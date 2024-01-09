@@ -1,19 +1,19 @@
 .title {
   color: rgb(37, 37, 37);
   font-family: 'Abril Fatface', serif;
-  font-size: max(2rem, 2vw);
+  font-size: 2rem;
+  margin-bottom: 1em;
 }
 
 .text {
   color: rgb(94, 94, 94);
   font-weight: 500;
-  font-size: max(1rem, 0.8vw);
+  font-size: 0.9rem;
   font-family: 'Montserrat', sans-serif;
-  margin-bottom: 2rem;
+  margin-bottom: 1em;
 }
 
 .form {
-  /* margin-top: 1rem; */
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
@@ -28,12 +28,12 @@
 
 input,
 textarea {
-  margin-top: 0.1rem;
+  margin-top: 0.1em;
   display: block;
   width: 100%;
   border: 1px solid #dfdfe0;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: rgb(37, 37, 37);
   font-weight: 400;
   padding: 0.5rem 0.5rem;
@@ -58,4 +58,32 @@ textarea:focus {
 
 .submit {
   margin-top: 2.5rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .text,
+  input,
+  textarea,
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 1rem;
+  }
+
+  .label {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .text {
+    font-size: 1.1rem;
+  }
 }

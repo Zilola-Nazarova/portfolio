@@ -32,17 +32,16 @@ button {
 }
 
 .btn {
-  font-family: 'Montserrat', sans-serif;
-  width: 40%;
-  height: 3vw;
   min-height: 3rem;
-  min-width: 10rem;
+  width: 50%;
+  min-width: 8rem;
+  max-width: 12rem;
+  font-size: 1rem;
+  border-radius: 1.5em;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  font-size: max(1rem, 1vw);
-  line-height: max(1rem, 1vw);
   letter-spacing: 0.1rem;
-  padding: 1rem;
-  border-radius: max(1.5rem, 2.5vw);
+  padding: 1em;
   color: rgb(255, 255, 255);
 }
 
@@ -144,4 +143,18 @@ button {
 
 .theme_3 .social li:hover {
   background-color: #73b84b4f;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .btn {
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .btn {
+    font-size: 1.2rem;
+  }
 }

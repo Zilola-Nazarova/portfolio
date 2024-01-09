@@ -5,24 +5,24 @@
 }
 
 .title {
-  font-size: max(2rem, 2vw);
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .subtitle {
   color: rgb(94, 94, 94);
-  font-size: max(1.2rem, 1vw);
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
 .hero,
 .social {
-  margin-top: min(4rem, 15%);
+  margin-top: 12%;
 }
 
 .hero {
   color: rgb(26, 26, 26);
-  font-size: max(1rem, 1vw);
+  font-size: 1rem;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
 }
@@ -47,6 +47,42 @@
 }
 
 .say_hi {
-  margin-top: min(1.2rem, 10%);
+  margin-top: 1.2rem;
   font-weight: 400;
+}
+
+@media only screen and (min-width: 992px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero {
+    font-size: 1.05rem;
+  }
+
+  .say_hi {
+    margin-top: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1.35rem;
+  }
+
+  .hero {
+    font-size: 1.1rem;
+  }
+
+  .say_hi {
+    margin-top: 1.6rem;
+  }
 }
