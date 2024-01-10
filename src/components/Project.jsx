@@ -16,16 +16,21 @@ const Project = ({ project, id }) => {
 
   return (
     <>
-      <div className={`${styles[mockId]} ${styles.mockup}`}>
-        <img src={image} alt="Project preview" />
+      <div className={styles.mockup}>
+        <div className={styles[mockId]}>
+          <img src={image} alt="Project preview" />
+        </div>
+        <div className={styles[mockId]}>
+          <img src={image} alt="Project preview" />
+        </div>
       </div>
       <h2 className={styles.title}>{name}</h2>
-      <p className={styles.description}>{description}</p>
       <ul className={styles.tech}>
         {technologies.map((tech) => (
           <li key={uuidv4()}>{tech}</li>
         ))}
       </ul>
+      <p className={styles.description}>{description}</p>
       <div className={`${styles.link}`}>
         <a href={source}><FaGithub />Source Code</a>
         <a href={liveDemo}><FaExternalLinkAlt />Live Demo</a>
