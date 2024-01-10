@@ -76,6 +76,7 @@
 .mockup {
   width: 100%;
   aspect-ratio: 16/9;
+
   /* border: 1px solid rgb(243, 0, 0); */
   display: flex;
   justify-content: space-around;
@@ -91,6 +92,7 @@
 .mock_1,
 .mock_3 {
   width: 100%;
+
   /* aspect-ratio: 16/9; */
 }
 
