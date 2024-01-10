@@ -59,11 +59,23 @@ header button:hover {
 .home,
 .about,
 .contact {
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 calc(9vw - 2rem);
   padding-top: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+  header button {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header button {
+    font-size: 1rem;
+  }
 }
