@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
-
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import styles from '../styles/Project.module.css';
 
 const Project = ({ project, id }) => {
@@ -27,8 +27,8 @@ const Project = ({ project, id }) => {
         ))}
       </ul>
       <div className={`${styles.link}`}>
-        <a href={source}>Source Code</a>
-        <a href={liveDemo}>Live Demo</a>
+        <a href={source}><FaGithub />Source Code</a>
+        <a href={liveDemo}><FaExternalLinkAlt />Live Demo</a>
       </div>
     </>
   );
@@ -36,10 +36,10 @@ const Project = ({ project, id }) => {
 
 Project.propTypes = {
   id: PropTypes.number.isRequired,
-  project: PropTypes.objectOf({
+  project: PropTypes.shape({
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    technologies: PropTypes.array.isRequired,
+    technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
     source: PropTypes.string.isRequired,
     live_demo: PropTypes.string.isRequired,
   }).isRequired,
