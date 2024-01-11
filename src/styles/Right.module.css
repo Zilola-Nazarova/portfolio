@@ -1,0 +1,81 @@
+.right {
+  background-color: rgb(250, 249, 248);
+  flex: 2;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 6rem;
+  padding: 0.3rem calc(9vw - 2rem);
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.avatar {
+  height: 3.8rem;
+  width: 3.8rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+.avatar img {
+  height: 3.2rem;
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+}
+
+header ul {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8%;
+}
+
+header button {
+  font-size: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: grey;
+  text-transform: uppercase;
+}
+
+header button.active {
+  text-decoration: underline;
+}
+
+header button:hover {
+  color: rgb(77, 77, 77);
+}
+
+.home,
+.about,
+.contact {
+  min-height: 100vh;
+  padding: 0 calc(9vw - 2rem);
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media only screen and (min-width: 992px) {
+  header button {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header button {
+    font-size: 1rem;
+  }
+}

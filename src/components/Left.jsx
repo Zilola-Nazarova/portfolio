@@ -1,24 +1,19 @@
-// import Scrollchor from 'react-scrollchor';
-// import Projects from './Projects';
-import { v4 as uuidv4 } from 'uuid';
-// import React from 'react';
 import { useRef, useState, createRef } from 'react';
-import { TbPointFilled } from 'react-icons/tb';
-// import { NavLink, useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types';
+
 import Bullet from './Bullet';
-import projectDetails from '../assets/projects';
 import Project from './Project';
+import projectDetails from '../assets/projects';
 import styles from '../styles/Left.module.css';
 
-const Left = () => {
-  // const pr_1 = useRef(null);
+const Left = ({ colorTheme }) => {
   const [tab, setTab] = useState('pr_0');
   const container = useRef(null);
   const elementsRef = useRef(projectDetails.map(() => createRef()));
 
   const handleClick = (index) => {
     const ref = elementsRef.current[index];
-    setTab(`pr_${index}`);
     container.current.scrollTo({
       top: ref.current.offsetTop,
       behavior: 'smooth',
@@ -32,30 +27,50 @@ const Left = () => {
         key={uuidv4()}
         isActive={tab === `pr_${i}`}
         onClick={() => handleClick(i)}
-      >
-        <TbPointFilled className={styles.bullet} size="30px" />
-      </Bullet>,
+      />,
     );
   }
+
+  const handleScroll = () => {
+    const scrollY = container.current.scrollTop;
+    bullets.forEach((bullet, i) => {
+      const { offsetHeight, offsetTop } = elementsRef.current[i].current;
+      if (
+        scrollY > offsetTop - (offsetHeight / 2)
+        && scrollY <= offsetTop + offsetHeight
+      ) {
+        setTab(`pr_${i}`);
+        colorTheme(i);
+      }
+    });
+  };
 
   return (
     <div className={styles.left}>
       <nav>
         {bullets}
       </nav>
-      <section ref={container} className="container">
+      <section
+        ref={container}
+        className="container"
+        onScroll={() => handleScroll()}
+      >
         {projectDetails.map((project, i) => (
           <article
             className={styles.project}
             ref={elementsRef.current[i]}
             key={uuidv4()}
           >
-            <Project project={project} />
+            <Project project={project} id={i} />
           </article>
         ))}
       </section>
     </div>
   );
+};
+
+Left.propTypes = {
+  colorTheme: PropTypes.func.isRequired,
 };
 
 export default Left;

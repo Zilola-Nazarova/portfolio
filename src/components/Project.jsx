@@ -1,11 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
-// import { objectOf } from 'prop-types';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import styles from '../styles/Project.module.css';
 
-import styles from '../styles/Projects.module.css';
-
-const Project = ({ project }) => {
+const Project = ({ project, id }) => {
+  const mockId = `mock_${id + 1}`;
   const liveDemo = project.live_demo;
+  const image = project.featured_image;
   const {
     name,
     description,
@@ -16,28 +17,41 @@ const Project = ({ project }) => {
   return (
     <>
       <div className={styles.mockup}>
-        Mockup
+        <div className={styles[mockId]}>
+          <img src={image} alt="Project preview" />
+        </div>
+        <div className={styles[mockId]}>
+          <img src={image} alt="Project preview" />
+        </div>
       </div>
-      <h2 className={styles.white}>{name}</h2>
-      <p>{description}</p>
-      <ul>
+      <h2 className={styles.title}>{name}</h2>
+      <ul className={styles.tech}>
         {technologies.map((tech) => (
           <li key={uuidv4()}>{tech}</li>
         ))}
       </ul>
-      <div>
-        <a href={source} className={`${styles.link} btn`}>Source Code</a>
-        <a href={liveDemo} className={`${styles.link} btn`}>Live Demo</a>
+      <p className={styles.description}>{description}</p>
+      <div className={`${styles.link}`}>
+        <a href={source}>
+          <FaGithub />
+          Source Code
+        </a>
+        <a href={liveDemo}>
+          <FaExternalLinkAlt />
+          Live Demo
+        </a>
       </div>
     </>
   );
 };
 
 Project.propTypes = {
-  project: PropTypes.objectOf({
+  id: PropTypes.number.isRequired,
+  project: PropTypes.shape({
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    technologies: PropTypes.array.isRequired,
+    featured_image: PropTypes.string.isRequired,
+    technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
     source: PropTypes.string.isRequired,
     live_demo: PropTypes.string.isRequired,
   }).isRequired,

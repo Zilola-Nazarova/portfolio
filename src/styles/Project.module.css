@@ -1,0 +1,148 @@
+.title {
+  margin-top: 3%;
+  font-size: 1.5rem;
+  font-family: 'Abril Fatface', serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.description {
+  color: #ffffffd5;
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.link {
+  margin-top: 3%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+.link a {
+  text-decoration: none;
+  min-width: 9rem;
+  width: 45%;
+  max-width: 13rem;
+  padding: 1.2em 1em;
+  border-radius: 1.7em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.144);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6%;
+}
+
+.link a:last-child svg {
+  height: 0.9em;
+}
+
+.link a:hover {
+  background-color: rgba(255, 255, 255, 0.219);
+}
+
+.tech {
+  width: 100%;
+  color: #ffffffd5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.tech li {
+  padding-right: 2%;
+  font-size: 0.9rem;
+  line-height: 1.5em;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tech li:not(:last-of-type) {
+  border-right: 1px solid #ffffffc5;
+}
+
+.tech li:last-of-type {
+  padding-right: 0;
+}
+
+.mockup {
+  width: 100%;
+  aspect-ratio: 16/9;
+
+  /* border: 1px solid rgb(243, 0, 0); */
+  display: flex;
+  justify-content: space-around;
+}
+
+.mockup div {
+  border-radius: 1rem;
+  box-shadow: 15px 15px 25px 5px rgba(0, 0, 0, 0.171);
+  background-color: white;
+  position: relative;
+}
+
+.mock_1,
+.mock_3 {
+  width: 100%;
+
+  /* aspect-ratio: 16/9; */
+}
+
+.mock_2,
+.mock_4 {
+  height: 100%;
+  aspect-ratio: 9/16;
+}
+
+.mock_1:first-child,
+.mock_3:first-child {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .tech li {
+    font-size: 1rem;
+  }
+
+  .link a {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+
+  .tech {
+    gap: 3%;
+  }
+
+  .tech li {
+    padding-right: 3%;
+  }
+
+  .link a {
+    font-size: 1rem;
+  }
+}

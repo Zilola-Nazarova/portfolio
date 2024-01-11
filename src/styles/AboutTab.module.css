@@ -1,0 +1,73 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: rgb(37, 37, 37);
+  font-family: 'Abril Fatface', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.topic h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: grey;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+  margin-top: 1.5rem;
+}
+
+.table {
+  padding-left: 3px;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  color: rgb(26, 26, 26);
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.table li::before {
+  content: "\2022";
+  color: rgb(94, 94, 94);
+  font-weight: 900;
+  display: inline-block;
+  width: 1em;
+}
+
+.download {
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .topic h2 {
+    font-size: 1.6rem;
+  }
+
+  .table {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .topic h2 {
+    font-size: 1.7rem;
+  }
+
+  .table {
+    font-size: 1.2rem;
+  }
+}
