@@ -7,9 +7,10 @@ import HomeTab from './HomeTab';
 import AboutTab from './AboutTab';
 import Contact from './Contact';
 import styles from '../styles/Right.module.css';
-import peach from '../assets/peach.png';
+import peach_1 from '../assets/images/0_1.svg';
+import peach_2 from '../assets/images/0_2.svg';
 
-const Right = ({ color }) => {
+const Right = ({ color, blink, doBlink }) => {
   const [tab, setTab] = useState('home');
   const container = useRef(null);
   const links = ['home', 'about', 'contact'];
@@ -43,15 +44,18 @@ const Right = ({ color }) => {
   };
 
   return (
-    <div className={`${styles.right} theme_${color}`}>
+    <div
+      className={`${styles.right} theme_${color}`}
+      onClick={() => doBlink()}
+    >
       <header>
         <div className={`${styles.avatar} bg`}>
-          <img src={peach} alt="avatar" />
+          <img src={blink ? peach_2 : peach_1} alt="avatar" />
         </div>
         <ul>
           {links.map((elem, i) => (
             <li key={uuidv4()}>
-              <TabButton
+             <TabButton
                 isActive={tab === elem}
                 onClick={() => handleClick(i)}
               >
