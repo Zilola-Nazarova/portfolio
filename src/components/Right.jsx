@@ -7,8 +7,8 @@ import HomeTab from './HomeTab';
 import AboutTab from './AboutTab';
 import Contact from './Contact';
 import styles from '../styles/Right.module.css';
-import peach_1 from '../assets/images/0_1.svg';
-import peach_2 from '../assets/images/0_2.svg';
+import peach1 from '../assets/images/0_1.svg';
+import peach2 from '../assets/images/0_2.svg';
 
 const Right = ({ color, blink, doBlink }) => {
   const [tab, setTab] = useState('home');
@@ -44,18 +44,19 @@ const Right = ({ color, blink, doBlink }) => {
   };
 
   return (
-    <div
+    <div // eslint-disable-line jsx-a11y/no-static-element-interactions
       className={`${styles.right} theme_${color}`}
       onClick={() => doBlink()}
+      onKeyDown={() => doBlink()}
     >
       <header>
         <div className={`${styles.avatar} bg`}>
-          <img src={blink ? peach_2 : peach_1} alt="avatar" />
+          <img src={blink ? peach2 : peach1} alt="avatar" />
         </div>
         <ul>
           {links.map((elem, i) => (
             <li key={uuidv4()}>
-             <TabButton
+              <TabButton
                 isActive={tab === elem}
                 onClick={() => handleClick(i)}
               >
@@ -86,6 +87,8 @@ const Right = ({ color, blink, doBlink }) => {
 
 Right.propTypes = {
   color: PropTypes.number.isRequired,
+  blink: PropTypes.string.isRequired,
+  doBlink: PropTypes.func.isRequired,
 };
 
 export default Right;
