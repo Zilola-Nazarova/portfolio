@@ -6,7 +6,7 @@ import Bullet from './Bullet';
 import Project from './Project';
 import projectDetails from '../assets/projects';
 import styles from '../styles/Projects.module.css';
-import left from '../styles/Left.module.css';
+// import left from '../styles/Left.module.css';
 
 const Projects = ({ colorTheme }) => {
   const [tab, setTab] = useState('pr_0');
@@ -15,7 +15,6 @@ const Projects = ({ colorTheme }) => {
 
   const handleClick = (index) => {
     const ref = elementsRef.current[index];
-    console.log('click', index, ref)
     container.current.scrollTo({
       top: ref.current.offsetTop,
       behavior: 'smooth',
