@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import TabButton from './TabButton';
 import HomeTab from './HomeTab';
+import ProjectsTab from './ProjectsTab';
 import AboutTab from './AboutTab';
 import Contact from './Contact';
 import styles from '../styles/Right.module.css';
@@ -13,7 +14,7 @@ import peach2 from '../assets/images/0_2.svg';
 const Right = ({ color, blink, doBlink }) => {
   const [tab, setTab] = useState('home');
   const container = useRef(null);
-  const links = ['home', 'about', 'contact'];
+  const links = ['home', 'projects', 'about', 'contact'];
   const linksRef = useRef(links.map(() => createRef()));
 
   const handleClick = (index) => {
@@ -25,7 +26,8 @@ const Right = ({ color, blink, doBlink }) => {
   };
 
   const sections = [
-    <HomeTab key={uuidv4()} sayHi={() => handleClick(2)} />,
+    <HomeTab key={uuidv4()} sayHi={() => handleClick(3)} />,
+    <ProjectsTab key={uuidv4()} />,
     <AboutTab key={uuidv4()} />,
     <Contact key={uuidv4()} />,
   ];
@@ -55,7 +57,10 @@ const Right = ({ color, blink, doBlink }) => {
         </div>
         <ul>
           {links.map((elem, i) => (
-            <li key={uuidv4()}>
+            <li
+              key={uuidv4()}
+              className={styles[`tab_${elem}`]}
+            >
               <TabButton
                 isActive={tab === elem}
                 onClick={() => handleClick(i)}
