@@ -5,8 +5,10 @@ import styles from '../styles/Project.module.css';
 
 const Project = ({ project, id }) => {
   const mockId = `mock_${id + 1}`;
+  const mockup = `mockup_${id + 1}`;
   const liveDemo = project.live_demo;
   const image = project.featured_image;
+  const altImage = project.alternative_images[1];
   const {
     name,
     description,
@@ -16,12 +18,12 @@ const Project = ({ project, id }) => {
 
   return (
     <>
-      <div className={styles.mockup}>
+      <div className={`${styles[mockup]} ${styles.mockup}`}>
         <div className={styles[mockId]}>
           <img src={image} alt="Project preview" />
         </div>
         <div className={styles[mockId]}>
-          <img src={image} alt="Project preview" />
+          <img src={altImage} alt="Project preview" />
         </div>
       </div>
       <h2 className={styles.title}>{name}</h2>
