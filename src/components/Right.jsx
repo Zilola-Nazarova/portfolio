@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useRef, useState, createRef } from 'react';
 import PropTypes from 'prop-types';
+import useWindowDimensions from './useWindowDimensions';
 
 import TabButton from './TabButton';
 import HomeTab from './HomeTab';
@@ -16,6 +17,7 @@ const Right = ({ color, blink, doBlink }) => {
   const container = useRef(null);
   const links = ['home', 'projects', 'about', 'contact'];
   const linksRef = useRef(links.map(() => createRef()));
+  const { height } = useWindowDimensions();
 
   const handleClick = (index) => {
     const ref = linksRef.current[index];
@@ -35,10 +37,11 @@ const Right = ({ color, blink, doBlink }) => {
   const handleScroll = () => {
     const scrollY = container.current.scrollTop;
     links.forEach((link, i) => {
-      const { offsetHeight, offsetTop } = linksRef.current[i].current;
+      let { offsetHeight, offsetTop } = linksRef.current[i].current;
+
       if (
-        scrollY > offsetTop - (offsetHeight / 2)
-        && scrollY <= offsetTop + offsetHeight
+        (scrollY > offsetTop - (height / 2)
+        && scrollY <= offsetTop + offsetHeight)
       ) {
         setTab(link);
       }
