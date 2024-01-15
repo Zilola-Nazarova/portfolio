@@ -7,19 +7,6 @@
   z-index: 1;
 }
 
-.project {
-  color: white;
-  min-height: 100vh;
-  padding: 5rem 1rem;
-  padding-right: calc(1rem + 2.5rem);
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Montserrat', sans-serif;
-}
-
 .left nav {
   position: absolute;
   display: flex;
@@ -52,28 +39,5 @@
 
   .bullet {
     color: #fff;
-  }
-}
-
-.project:nth-child(4n + 1) {
-  background-color: #7d4abe;
-}
-
-.project:nth-child(4n + 2) {
-  background-color: #54adb3;
-}
-
-.project:nth-child(4n + 3) {
-  background-color: #d074c9;
-}
-
-.project:nth-child(4n + 0) {
-  background-color: #73b84b;
-}
-
-@media only screen and (min-width: 768px) {
-  .project {
-    padding: 5rem calc(20vw - 8.5rem);
-    padding-right: calc(20vw - 8.5rem + 2.5rem);
   }
 }
