@@ -88,6 +88,7 @@ header button:hover {
     gap: 5%;
   }
 }
+
 @media only screen and (min-width: 700px) {
   .projects {
     display: none;

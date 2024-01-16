@@ -127,6 +127,7 @@
     font-size: 0.8rem;
   }
 }
+
 @media only screen and (min-height: 780px) {
   .mock_2,
   .mock_4 {
