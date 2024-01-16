@@ -1,5 +1,5 @@
 import Projects from './Projects';
-import styles from '../styles/ProjectsTab.module.css';
+// import styles from '../styles/ProjectsTab.module.css';
 
 const ProjectsTab = ({colorTheme}) => {
   return (
