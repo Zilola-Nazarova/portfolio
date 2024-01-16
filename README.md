@@ -19,7 +19,6 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 
@@ -53,7 +52,7 @@ This is my Personal Portfolio website. Visitors can acquire important informatio
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- use this link to visit my Personal Portfolio Website [Zilola Nazarova](http://zilola.me/portfolio/)
+- use this link to visit my Personal Portfolio Website [Zilola Nazarova](https://zilola-nazarova.github.io/portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
