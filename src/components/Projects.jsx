@@ -71,7 +71,11 @@ const Projects = ({ colorTheme }) => {
 };
 
 Projects.propTypes = {
-  colorTheme: PropTypes.func.isRequired,
+  colorTheme: PropTypes.func,
+};
+
+Projects.defaultProps = {
+  colorTheme: null,
 };
 
 export default Projects;
