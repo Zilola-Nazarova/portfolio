@@ -44,6 +44,8 @@ const Right = ({ color, blink, doBlink }) => {
         && scrollY <= offsetTop + offsetHeight)
       ) {
         setTab(link);
+      } else if (scrollY == 0) {
+        setTab(links[0]);
       }
     });
   };
