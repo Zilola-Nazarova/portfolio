@@ -40,13 +40,12 @@ button {
   border-radius: 1.5em;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
   padding: 1em;
   color: rgb(255, 255, 255);
 }
 
 .btn:hover {
-  filter: contrast(135%);
+  filter: opacity(85%);
 }
 
 .theme_0 {
@@ -143,6 +142,20 @@ button {
 
 .theme_3 .social li:hover {
   background-color: #73b84b4f;
+}
+
+nav {
+  display: none;
+}
+
+@media only screen and (min-width: 700px) {
+  nav {
+    display: block;
+  }
+
+  /* .container {
+    margin-top: 6rem;
+  } */
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

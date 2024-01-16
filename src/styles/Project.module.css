@@ -22,19 +22,21 @@
 
 .link a {
   text-decoration: none;
-  min-width: 9rem;
-  width: 45%;
-  max-width: 13rem;
-  padding: 1.2em 1em;
-  border-radius: 1.7em;
+  width: 47%;
+  padding: 1.2em 0.6em;
+  border-radius: 1.9em;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   background-color: rgba(255, 255, 255, 0.144);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6%;
+}
+
+.link a svg {
+  display: none;
 }
 
 .link a:last-child svg {
@@ -75,36 +77,62 @@
 
 .mockup {
   width: 100%;
-  aspect-ratio: 16/9;
-
-  /* border: 1px solid rgb(243, 0, 0); */
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.mockup_1,
+.mockup_3 {
+  aspect-ratio: 16/9;
+}
+
+.mockup_2,
+.mockup_4 {
+  aspect-ratio: 1/1;
 }
 
 .mockup div {
-  border-radius: 1rem;
-  box-shadow: 15px 15px 25px 5px rgba(0, 0, 0, 0.171);
-  background-color: white;
-  position: relative;
+  border-radius: 0.5rem;
+  box-shadow: 15px 15px 25px 5px rgba(0, 0, 0, 0.342);
+  overflow: hidden;
 }
 
-.mock_1,
-.mock_3 {
+.mockup img {
+  display: block;
   width: 100%;
-
-  /* aspect-ratio: 16/9; */
 }
 
 .mock_2,
 .mock_4 {
-  height: 100%;
-  aspect-ratio: 9/16;
+  max-width: 45%;
 }
 
-.mock_1:first-child,
-.mock_3:first-child {
+.mockup_1 div:last-of-type,
+.mockup_3 div:last-of-type {
   display: none;
+}
+
+@media only screen and (min-width: 350px) {
+  .link a svg {
+    display: block;
+  }
+
+  .link a {
+    min-width: 9rem;
+    max-width: 13rem;
+    padding: 1.2em 1em;
+    border-radius: 1.6em;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-height: 780px) {
+  .mock_2,
+  .mock_4 {
+    max-height: 40vh;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -122,6 +150,16 @@
 
   .link a {
     font-size: 0.9rem;
+  }
+
+  .mockup_2,
+  .mockup_4 {
+    aspect-ratio: 5/4;
+  }
+
+  .mock_2,
+  .mock_4 {
+    max-width: 40%;
   }
 }
 
@@ -144,5 +182,27 @@
 
   .link a {
     font-size: 1rem;
+  }
+
+  .mockup_2,
+  .mockup_4 {
+    aspect-ratio: 16/11;
+  }
+
+  .mock_2,
+  .mock_4 {
+    max-width: 35%;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .mockup_2,
+  .mockup_4 {
+    aspect-ratio: 16/9;
+  }
+
+  .mock_2,
+  .mock_4 {
+    max-width: 27%;
   }
 }

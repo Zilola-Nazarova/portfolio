@@ -1,19 +1,23 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useRef, useState, createRef } from 'react';
 import PropTypes from 'prop-types';
+import useWindowDimensions from './useWindowDimensions';
 
 import TabButton from './TabButton';
 import HomeTab from './HomeTab';
+import ProjectsTab from './ProjectsTab';
 import AboutTab from './AboutTab';
 import Contact from './Contact';
 import styles from '../styles/Right.module.css';
-import peach from '../assets/peach.png';
+import peach1 from '../assets/images/0_1.svg';
+import peach2 from '../assets/images/0_2.svg';
 
-const Right = ({ color }) => {
+const Right = ({ color, blink, doBlink }) => {
   const [tab, setTab] = useState('home');
   const container = useRef(null);
-  const links = ['home', 'about', 'contact'];
+  const links = ['home', 'projects', 'about', 'contact'];
   const linksRef = useRef(links.map(() => createRef()));
+  const { height } = useWindowDimensions();
 
   const handleClick = (index) => {
     const ref = linksRef.current[index];
@@ -24,7 +28,8 @@ const Right = ({ color }) => {
   };
 
   const sections = [
-    <HomeTab key={uuidv4()} sayHi={() => handleClick(2)} />,
+    <HomeTab key={uuidv4()} sayHi={() => handleClick(3)} />,
+    <ProjectsTab key={uuidv4()} />,
     <AboutTab key={uuidv4()} />,
     <Contact key={uuidv4()} />,
   ];
@@ -33,24 +38,34 @@ const Right = ({ color }) => {
     const scrollY = container.current.scrollTop;
     links.forEach((link, i) => {
       const { offsetHeight, offsetTop } = linksRef.current[i].current;
+
       if (
-        scrollY > offsetTop - (offsetHeight / 2)
-        && scrollY <= offsetTop + offsetHeight
+        (scrollY > offsetTop - (height / 2)
+        && scrollY <= offsetTop + offsetHeight)
       ) {
         setTab(link);
+      } else if (scrollY === 0) {
+        setTab(links[0]);
       }
     });
   };
 
   return (
-    <div className={`${styles.right} theme_${color}`}>
+    <div // eslint-disable-line jsx-a11y/no-static-element-interactions
+      className={`${styles.right} theme_${color}`}
+      onClick={() => doBlink()}
+      onKeyDown={() => doBlink()}
+    >
       <header>
         <div className={`${styles.avatar} bg`}>
-          <img src={peach} alt="avatar" />
+          <img src={blink ? peach2 : peach1} alt="avatar" />
         </div>
         <ul>
           {links.map((elem, i) => (
-            <li key={uuidv4()}>
+            <li
+              key={uuidv4()}
+              className={styles[`tab_${elem}`]}
+            >
               <TabButton
                 isActive={tab === elem}
                 onClick={() => handleClick(i)}
@@ -82,6 +97,8 @@ const Right = ({ color }) => {
 
 Right.propTypes = {
   color: PropTypes.number.isRequired,
+  blink: PropTypes.bool.isRequired,
+  doBlink: PropTypes.func.isRequired,
 };
 
 export default Right;

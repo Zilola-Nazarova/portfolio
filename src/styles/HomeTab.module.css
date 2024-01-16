@@ -67,6 +67,10 @@
   .say_hi {
     margin-top: 1.4rem;
   }
+
+  .social {
+    gap: 0.8rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -84,5 +88,9 @@
 
   .say_hi {
     margin-top: 1.6rem;
+  }
+
+  .social {
+    gap: 1rem;
   }
 }

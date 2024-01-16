@@ -12,36 +12,27 @@ header {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 6rem;
-  padding: 0.3rem calc(9vw - 2rem);
+  height: 4.5rem;
+  padding: 0.5rem 8%;
   display: flex;
   align-items: center;
   border-bottom: 2px solid #f1f1f1;
+  z-index: 1;
 }
 
 .avatar {
-  height: 3.8rem;
-  width: 3.8rem;
-  border-radius: 50%;
-  position: relative;
-}
-
-.avatar img {
-  height: 3.2rem;
-  position: absolute;
-  bottom: 6px;
-  left: 6px;
+  display: none;
 }
 
 header ul {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
-  gap: 8%;
+  justify-content: space-between;
+  gap: 4%;
 }
 
 header button {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: grey;
@@ -60,22 +51,87 @@ header button:hover {
 .about,
 .contact {
   min-height: 100vh;
-  padding: 0 calc(9vw - 2rem);
+  padding: 0 8%;
   padding-top: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: 1vh;
+}
+
+.home,
+.contact {
+  padding-bottom: 5rem;
+}
+
+@media only screen and (min-width: 350px) {
+  .avatar {
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  header ul {
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  header button {
+    font-size: 0.75rem;
+  }
+
+  header ul {
+    justify-content: flex-end;
+    gap: 5%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .projects {
+    display: none;
+  }
+
+  .tab_projects {
+    display: none;
+  }
+
+  .home,
+  .about,
+  .contact {
+    padding: 0 calc(9vw - 2rem);
+    padding-top: 6rem;
+  }
+
+  header {
+    height: 6rem;
+    padding: 0.3rem calc(9vw - 2rem);
+  }
+
+  header ul {
+    gap: 8%;
+  }
+
+  header button {
+    font-size: 0.8rem;
+  }
+
+  .avatar {
+    height: 3.8rem;
+    width: 3.8rem;
+  }
 }
 
 @media only screen and (min-width: 992px) {
   header button {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   header button {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
