@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import Portfolio from './components/Portfolio';
 
-import './index.css';
+import './index.scss';
 
 const domContainer = document.getElementById('root');
 const root = ReactDOM.createRoot(domContainer);
