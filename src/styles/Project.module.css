@@ -1,5 +1,7 @@
 .title {
   margin-top: 3%;
+  text-align: center;
+  word-spacing: 0.3rem;
   font-size: 1.5rem;
   font-family: 'Abril Fatface', serif;
   text-transform: uppercase;
