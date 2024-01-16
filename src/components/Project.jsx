@@ -53,6 +53,7 @@ Project.propTypes = {
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     featured_image: PropTypes.string.isRequired,
+    alternative_images: PropTypes.arrayOf(PropTypes.string).isRequired,
     technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
     source: PropTypes.string.isRequired,
     live_demo: PropTypes.string.isRequired,

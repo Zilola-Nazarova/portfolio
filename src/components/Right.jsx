@@ -37,14 +37,14 @@ const Right = ({ color, blink, doBlink }) => {
   const handleScroll = () => {
     const scrollY = container.current.scrollTop;
     links.forEach((link, i) => {
-      let { offsetHeight, offsetTop } = linksRef.current[i].current;
+      const { offsetHeight, offsetTop } = linksRef.current[i].current;
 
       if (
         (scrollY > offsetTop - (height / 2)
         && scrollY <= offsetTop + offsetHeight)
       ) {
         setTab(link);
-      } else if (scrollY == 0) {
+      } else if (scrollY === 0) {
         setTab(links[0]);
       }
     });
