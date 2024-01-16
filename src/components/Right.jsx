@@ -15,14 +15,16 @@ import peach2 from '../assets/images/0_2.svg';
 const Right = ({ color, blink, doBlink }) => {
   const [tab, setTab] = useState('home');
   const container = useRef(null);
+  const header = useRef(null)
   const links = ['home', 'projects', 'about', 'contact'];
   const linksRef = useRef(links.map(() => createRef()));
   const { height } = useWindowDimensions();
 
   const handleClick = (index) => {
     const ref = linksRef.current[index];
+    const offset = (index == 1) ? (header.current.clientHeight + 2) : 0;
     container.current.scrollTo({
-      top: ref.current.offsetTop,
+      top: ref.current.offsetTop - offset,
       behavior: 'smooth',
     });
   };
@@ -56,7 +58,7 @@ const Right = ({ color, blink, doBlink }) => {
       onClick={() => doBlink()}
       onKeyDown={() => doBlink()}
     >
-      <header>
+      <header ref={header}>
         <div className={`${styles.avatar} bg`}>
           <img src={blink ? peach2 : peach1} alt="avatar" />
         </div>
