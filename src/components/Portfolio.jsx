@@ -7,8 +7,8 @@ const Portfolio = () => {
   const [blink, setBlink] = useState(false);
 
   const doBlink = () => {
-    setBlink((prevMode) => !prevMode);
-    setTimeout(() => { setBlink((prevMode) => !prevMode); }, 200);
+    setBlink(true);
+    setTimeout(() => { setBlink(false); }, 200);
   };
 
   return (

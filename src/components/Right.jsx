@@ -97,7 +97,7 @@ const Right = ({ color, blink, doBlink }) => {
 
 Right.propTypes = {
   color: PropTypes.number.isRequired,
-  blink: PropTypes.string.isRequired,
+  blink: PropTypes.bool.isRequired,
   doBlink: PropTypes.func.isRequired,
 };
 
