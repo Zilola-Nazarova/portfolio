@@ -1,5 +1,7 @@
 .title {
   margin-top: 3%;
+  text-align: center;
+  word-spacing: 0.3rem;
   font-size: 1.5rem;
   font-family: 'Abril Fatface', serif;
   text-transform: uppercase;
@@ -93,14 +95,10 @@
   aspect-ratio: 1/1;
 }
 
-.mockup div {
-  border-radius: 0.5rem;
-  box-shadow: 15px 15px 25px 5px rgba(0, 0, 0, 0.342);
-  overflow: hidden;
-}
-
 .mockup img {
   display: block;
+  border-radius: 0.5rem;
+  box-shadow: 12px 12px 20px 5px rgba(0, 0, 0, 0.342);
   width: 100%;
 }
 
@@ -133,6 +131,10 @@
   .mock_4 {
     max-height: 40vh;
   }
+
+  .mockup {
+    gap: 15%;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -152,6 +154,10 @@
     font-size: 0.9rem;
   }
 
+  .mockup {
+    gap: 20%;
+  }
+
   .mockup_2,
   .mockup_4 {
     aspect-ratio: 5/4;
@@ -159,7 +165,7 @@
 
   .mock_2,
   .mock_4 {
-    max-width: 40%;
+    max-width: 38%;
   }
 }
 

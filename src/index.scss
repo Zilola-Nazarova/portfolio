@@ -1,3 +1,8 @@
+$theme_0: #7d4abe;
+$theme_1: #54adb3;
+$theme_2: #d074c9;
+$theme_3: #6bad44;
+
 * {
   margin: 0;
   padding: 0;
@@ -50,41 +55,41 @@ button {
 
 .theme_0 {
   hr {
-    border: 1px solid #7d4abe;
+    border: 1px solid $theme_0;
   }
 
   .bg {
-    background-color: #7d4abe;
+    background-color: $theme_0;
   }
 }
 
 .theme_1 {
   hr {
-    border: 1px solid #54adb3;
+    border: 1px solid $theme_1;
   }
 
   .bg {
-    background-color: #54adb3;
+    background-color: $theme_1;
   }
 }
 
 .theme_2 {
   hr {
-    border: 1px solid #d074c9;
+    border: 1px solid $theme_2;
   }
 
   .bg {
-    background-color: #d074c9;
+    background-color: $theme_2;
   }
 }
 
 .theme_3 {
   hr {
-    border: 1px solid #73b84b;
+    border: 1px solid $theme_3;
   }
 
   .bg {
-    background-color: #73b84b;
+    background-color: $theme_3;
   }
 }
 
@@ -94,7 +99,7 @@ button {
   }
 
   svg {
-    color: #7d4abe;
+    color: $theme_0;
   }
 }
 
@@ -104,7 +109,7 @@ button {
   }
 
   svg {
-    color: #54adb3;
+    color: $theme_1;
   }
 }
 
@@ -114,7 +119,7 @@ button {
   }
 
   svg {
-    color: #d074c9;
+    color: $theme_2;
   }
 }
 
@@ -124,7 +129,7 @@ button {
   }
 
   svg {
-    color: #73b84b;
+    color: $theme_3;
   }
 }
 
