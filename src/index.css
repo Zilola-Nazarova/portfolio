@@ -40,13 +40,12 @@ button {
   border-radius: 1.5em;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
   padding: 1em;
   color: rgb(255, 255, 255);
 }
 
 .btn:hover {
-  filter: contrast(135%);
+  filter: opacity(85%);
 }
 
 .theme_0 {
