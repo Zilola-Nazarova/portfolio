@@ -15,14 +15,14 @@ import peach2 from '../assets/images/0_2.svg';
 const Right = ({ color, blink, doBlink }) => {
   const [tab, setTab] = useState('home');
   const container = useRef(null);
-  const header = useRef(null)
+  const header = useRef(null);
   const links = ['home', 'projects', 'about', 'contact'];
   const linksRef = useRef(links.map(() => createRef()));
   const { height } = useWindowDimensions();
 
   const handleClick = (index) => {
     const ref = linksRef.current[index];
-    const offset = (index == 1) ? (header.current.clientHeight + 2) : 0;
+    const offset = (index === 1) ? (header.current.clientHeight + 2) : 0;
     container.current.scrollTo({
       top: ref.current.offsetTop - offset,
       behavior: 'smooth',
