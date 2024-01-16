@@ -22,19 +22,21 @@
 
 .link a {
   text-decoration: none;
-  min-width: 9rem;
-  width: 45%;
-  max-width: 13rem;
-  padding: 1.2em 1em;
-  border-radius: 1.7em;
+  width: 47%;
+  padding: 1.2em 0.6em;
+  border-radius: 1.9em;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   background-color: rgba(255, 255, 255, 0.144);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 6%;
+}
+
+.link a svg {
+  display: none;
 }
 
 .link a:last-child svg {
@@ -112,6 +114,19 @@
   display: none;
 }
 
+@media only screen and (min-width: 350px) {
+  .link a svg {
+    display: block;
+  }
+
+  .link a {
+    min-width: 9rem;
+    max-width: 13rem;
+    padding: 1.2em 1em;
+    border-radius: 1.6em;
+    font-size: 0.8rem;
+  }
+}
 @media only screen and (min-height: 780px) {
   .mock_2,
   .mock_4 {
