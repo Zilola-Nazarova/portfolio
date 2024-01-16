@@ -12,25 +12,19 @@ header {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 6rem;
-  padding: 0.3rem calc(9vw - 2rem);
+  height: 5rem;
+  padding: 0.5rem 10%;
   display: flex;
   align-items: center;
   border-bottom: 2px solid #f1f1f1;
+  z-index: 1;
 }
 
 .avatar {
-  height: 3.8rem;
-  width: 3.8rem;
+  height: 3.2rem;
+  width: 3.2rem;
   border-radius: 50%;
   position: relative;
-}
-
-.avatar img {
-  height: 3.2rem;
-  position: absolute;
-  bottom: 6px;
-  left: 6px;
 }
 
 header ul {
@@ -60,7 +54,7 @@ header button:hover {
 .about,
 .contact {
   min-height: 100vh;
-  padding: 0 calc(9vw - 2rem);
+  padding: 0 10%;
   padding-top: 6rem;
   display: flex;
   flex-direction: column;
@@ -68,14 +62,49 @@ header button:hover {
   gap: 1rem;
 }
 
+.home,
+.contact {
+  min-height: 100vh;
+  padding-bottom: 6rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .projects {
+    display: none;
+  }
+
+  .tab_projects {
+    display: none;
+  }
+
+  .home,
+  .about,
+  .contact {
+    min-height: 100vh;
+    padding: 0 calc(9vw - 2rem);
+    padding-top: 6rem;
+    gap: 1rem;
+  }
+
+  header {
+    height: 6rem;
+    padding: 0.3rem calc(9vw - 2rem);
+  }
+
+  .avatar {
+    height: 3.8rem;
+    width: 3.8rem;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   header button {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   header button {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
