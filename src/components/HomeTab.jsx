@@ -28,12 +28,12 @@ const HomeTab = ({ sayHi }) => (
       Fast learner and multitasker.
     </p>
     <ul className={`${styles.social} social`}>
-      <li><a href="https://github.com/Zilola-Nazarova" aria-label="My GitHub"><FaGithub /></a></li>
-      <li><a href="https://www.linkedin.com/in/zilola-nazarova/" aria-label="My LinkedIn"><FaLinkedin /></a></li>
-      <li><a href="https://twitter.com/NazarovaZi" aria-label="My Twitter"><FaTwitter /></a></li>
-      <li><a href="https://wellfound.com/u/zilola-nazarova" aria-label="My Wellfound"><SiWellfound /></a></li>
-      <li><a href="https://medium.com/@zilolanazarova" aria-label="My MediumM"><FaMediumM /></a></li>
-      <li><a href="https://wellfound.com/u/zilola-nazarova" aria-label="My Angellist"><FaAngellist /></a></li>
+      <li><a href="https://github.com/Zilola-Nazarova" aria-label="My GitHub" target="_blank" rel="noreferrer"><FaGithub /></a></li>
+      <li><a href="https://www.linkedin.com/in/zilola-nazarova/" aria-label="My LinkedIn" target="_blank" rel="noreferrer"><FaLinkedin /></a></li>
+      <li><a href="https://twitter.com/NazarovaZi" aria-label="My Twitter" target="_blank" rel="noreferrer"><FaTwitter /></a></li>
+      <li><a href="https://wellfound.com/u/zilola-nazarova" aria-label="My Wellfound" target="_blank" rel="noreferrer"><SiWellfound /></a></li>
+      <li><a href="https://medium.com/@zilolanazarova" aria-label="My MediumM" target="_blank" rel="noreferrer"><FaMediumM /></a></li>
+      <li><a href="https://wellfound.com/u/zilola-nazarova" aria-label="My Angellist" target="_blank" rel="noreferrer"><FaAngellist /></a></li>
     </ul>
     <button
       type="button"
