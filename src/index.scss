@@ -9,6 +9,10 @@ $theme_3: #6bad44;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style: none;
 }
@@ -47,6 +51,17 @@ button {
   text-transform: uppercase;
   padding: 1em;
   color: rgb(255, 255, 255);
+  animation: glow 3s alternate infinite ease-in-out;
+}
+
+@keyframes glow {
+  80% {
+    filter: none;
+  }
+
+  100% {
+    filter: opacity(65%);
+  }
 }
 
 .btn:hover {

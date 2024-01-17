@@ -2,10 +2,10 @@ import styles from '../styles/AboutTab.module.css';
 
 const AboutTab = () => {
   const download = () => {
-    const pdfUrl = 'Resume.pdf';
+    const pdfUrl = 'Zilola_Nazarova_Resume.pdf';
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = 'Zilola.pdf';
+    link.download = 'Zilola_Nazarova_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

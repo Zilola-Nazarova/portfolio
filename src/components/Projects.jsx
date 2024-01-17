@@ -1,4 +1,9 @@
-import { useRef, useState, createRef } from 'react';
+import {
+  useRef,
+  useState,
+  createRef,
+  useEffect,
+} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 
@@ -9,7 +14,8 @@ import styles from '../styles/Projects.module.css';
 // import left from '../styles/Left.module.css';
 
 const Projects = ({ colorTheme }) => {
-  const [tab, setTab] = useState('pr_0');
+  const [tab, setTab] = useState(0);
+  const [iterator, setIterator] = useState(1);
   const container = useRef(null);
   const elementsRef = useRef(projectDetails.map(() => createRef()));
 
@@ -21,12 +27,24 @@ const Projects = ({ colorTheme }) => {
     });
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (tab === 2) {
+        setIterator(-1);
+      } else if (tab === 1) {
+        setIterator(1);
+      }
+      handleClick(tab + iterator);
+    }, 12000);
+    return () => clearInterval(interval);
+  }, [tab, iterator]);
+
   const bullets = [];
   for (let i = 0; i < 4; i += 1) {
     bullets.push(
       <Bullet
         key={uuidv4()}
-        isActive={tab === `pr_${i}`}
+        isActive={tab === i}
         onClick={() => handleClick(i)}
       />,
     );
@@ -40,7 +58,7 @@ const Projects = ({ colorTheme }) => {
         scrollY > offsetTop - (offsetHeight / 2)
         && scrollY <= offsetTop + offsetHeight
       ) {
-        setTab(`pr_${i}`);
+        setTab(i);
         colorTheme(i);
       }
     });
