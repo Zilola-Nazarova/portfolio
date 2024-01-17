@@ -35,7 +35,7 @@ const Projects = ({ colorTheme }) => {
         setIterator(1);
       }
       handleClick(tab + iterator);
-    }, 1000);
+    }, 12000);
     return () => clearInterval(interval);
   }, [tab, iterator]);
 
