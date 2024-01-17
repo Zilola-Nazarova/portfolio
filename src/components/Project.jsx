@@ -34,11 +34,11 @@ const Project = ({ project, id }) => {
       </ul>
       <p className={styles.description}>{description}</p>
       <div className={`${styles.link}`}>
-        <a href={source}>
+        <a href={source} target="_blank" rel="noreferrer">
           <FaGithub />
           Source Code
         </a>
-        <a href={liveDemo}>
+        <a href={liveDemo} target="_blank" rel="noreferrer">
           <FaExternalLinkAlt />
           Live Demo
         </a>
