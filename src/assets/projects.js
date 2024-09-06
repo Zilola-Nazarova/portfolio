@@ -5,7 +5,7 @@ const projectDetails = [
     featured_image: './blog_app.jpg',
     alternative_images: ['./blog_app.jpg'],
     technologies: ['HTML5', 'CSS3', 'Ruby on Rails', 'Devise', 'CanCanCan'],
-    live_demo: 'https://blog-app-zilola-3e304db4a389.herokuapp.com/',
+    live_demo: 'https://blog-app-bekk.onrender.com/',
     source: 'https://github.com/Zilola-Nazarova/blog-app',
   },
   {
